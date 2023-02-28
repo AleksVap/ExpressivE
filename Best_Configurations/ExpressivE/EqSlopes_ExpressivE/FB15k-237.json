@@ -1,0 +1,48 @@
+{
+  "dataset": "FB15k237",
+  "dataset_kwargs": {
+    "create_inverse_triples": false
+  },
+  "model": "ExpressivEModel",
+  "model_kwargs": {
+    "min_denom": 0,
+    "interactionMode": "eqSlopes",
+    "embedding_dim": 1000,
+    "p": 2,
+    "tanh_map": true
+  },
+  "loss": "NSSALoss",
+  "loss_kwargs": {
+    "reduction": "sum",
+    "adversarial_temperature": 4,
+    "margin": 4
+  },
+  "optimizer": "Adam",
+  "optimizer_kwargs": {
+    "lr": 1e-04
+  },
+  "training_loop": "SLCWATrainingLoop",
+  "negative_sampler": "BasicNegativeSampler",
+  "negative_sampler_kwargs": {
+    "num_negs_per_pos": 150
+  },
+  "training_kwargs": {
+    "num_epochs": 1000,
+    "checkpoint_frequency": 60,
+    "checkpoint_name": "checkpoint.pt",
+    "checkpoint_on_failure": true,
+    "batch_size": 1024
+  },
+  "stopper": "early",
+  "stopper_kwargs": {
+    "patience": 10,
+    "relative_delta": 0.01,
+    "frequency": 10
+  },
+  "evaluator": "RankBasedEvaluator",
+  "evaluator_kwargs": {
+    "filtered": true,
+    "batch_size": 1
+  },
+  "device": "gpu"
+}

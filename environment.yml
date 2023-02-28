@@ -1,0 +1,14 @@
+name: Env_ExpressivE
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - pytorch=1.10.2
+  - pip
+  - pip:
+      - pykeen==1.7.0
+      - class_resolver==0.3.3
+      - setuptools==59.5.0
+      - protobuf==3.20.*
+      - tensorboard==2.8.0
