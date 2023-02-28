@@ -64,7 +64,7 @@ Seed 2: `python run_per_relation_evaluation.py model_dir=Benchmarking sub_dir=Ba
 
 Seed 3: `python run_per_relation_evaluation.py model_dir=Benchmarking sub_dir=Base_ExpressivE_WN18RR_seed_3 config_path=Best_Configurations/ExpressivE/Base_ExpressivE/WN18RR.json`
 
-The relation-wise performance results will be stored at `Benchmarking/per_relation_result/Base_ExpressivE_WN18RR_seed_<s>`, where `<s>` is `1`, `2`, or `3`
+The relation-wise performance results will be stored at `Benchmarking/per_relation_result/Base_ExpressivE_WN18RR_seed_<s>`, where `<s>` is `1`, `2`, or `3`.
 
 # Citation 
 
